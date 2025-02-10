@@ -1,0 +1,21 @@
+dnf5 install --installroot=/mnt --releasever=41 --setopt=install_weak_deps=False --setopt=keepcache=True --nodocs --use-host-config  
+basesystem 
+dnf5 dnf5-plugins deltarpm 
+systemd systemd-udev audit chrony 
+glibc-langpack-en rootfiles btrfs-progs zstd ncurses binutils util-linux which less cracklib-dicts 
+bash-completion sudo nano 
+NetworkManager-wifi NetworkManager-tui 
+grub2-efi-x64 grub2-efi-x64-modules efibootmgr efivar 
+lz4 
+realtek-firmware atheros-firmware bluez mesa-dri-drivers 
+htop 
+pipewire wireplumber zram-generator-defaults kernel-longterm-core 
+cosmic-session
+
+
+setenforce 0
+mount -o remount,rw / 
+
+setup passwd
+
+grub2
